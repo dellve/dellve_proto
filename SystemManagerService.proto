@@ -1,8 +1,0 @@
-
-message SystemInfo {
-  required int32 numGPUDevices = 1;
-}
-
-service SystemManagerService {
-	rpc getSystemInfo(Empty) returns (SystemInfo);
-}
