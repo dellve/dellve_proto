@@ -8,6 +8,10 @@ import "dellve_types.proto";
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 service Benchend {
-	rpc getServerInfo(Empty) returns (ServerInfo);
-	rpc getMetricStream(stream MetricStreamCommand) returns (stream MetricStreamData);
+	rpc getServerInfo(Empty) returns (ServerInfo);	
+	rpc startMetricStream(MetricStreamInfo) returns (stream MetricStreamData);
+	rpc stopMetrisStream(MetricStreamInfo) returns (Status);
+	
+	// rpc startLogStream(LogStreamInfo) returns (stream LogData);
+	// rpc stopLogStream(LogStreamInfo) returns (Status);
 }

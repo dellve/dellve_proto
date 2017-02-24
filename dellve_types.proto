@@ -13,25 +13,24 @@ message Empty {
 
 }
 
-message Log {
+message LogStreamInfo {
+	string backendUrl = 1;
+	string backendPort = 2;
+}
+
+message LogStreamData {
 
 }
 
 message MetricStreamData {
-	int32 serverId = 1;
 	int32 gpuUtil = 2;
 	int32 memUtil = 3;
 }
 
-message MetricStreamCommand {
-	enum Type {
-		START = 0;
-		STOP = 1;
-	}
-    
-	int32 serverId = 1;
-	int32 sampleIntervalInMs = 2;
-	Type commandType = 5;
+message MetricStreamInfo {    
+	string backendUrl = 1;
+	string backendPort = 2;
+	int32 sampleIntervalInMs = 3;
 }
 
 message ServerInfo {

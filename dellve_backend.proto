@@ -8,5 +8,6 @@ import "dellve_types.proto";
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 service Backend {
+	rpc consumeMetricStream(stream MetricStreamData) returns (stream MetricStreamCommand);
 	rpc consumeLogStream(stream Log) returns (Status);
 }
