@@ -17,14 +17,21 @@ message Log {
 
 }
 
-message Metric {
+message MetricStreamData {
 	int32 serverId = 1;
 	int32 gpuUtil = 2;
 	int32 memUtil = 3;
 }
 
-message MetricStreamInfo {
+message MetricStreamCommand {
+	enum Type {
+		START = 0;
+		STOP = 1;
+	}
+    
 	int32 serverId = 1;
+	int32 sampleIntervalInMs = 2;
+	Type commandType = 5;
 }
 
 message ServerInfo {

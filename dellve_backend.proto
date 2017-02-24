@@ -9,5 +9,4 @@ import "dellve_types.proto";
 
 service Backend {
 	rpc consumeLogStream(stream Log) returns (Status);
-	rpc consumeMetricStream(stream Metric) returns (Status);
 }
