@@ -1,0 +1,36 @@
+
+syntax = "proto3";
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// 	DELLve RPC message types - shared by backend and benchend
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+message BenchendConfig {
+
+}
+
+message Empty {
+
+}
+
+message Log {
+
+}
+
+message Metric {
+	int32 serverId = 1;
+	int32 gpuUtil = 2;
+	int32 memUtil = 3;
+}
+
+message MetricStreamInfo {
+	int32 serverId = 1;
+}
+
+message ServerInfo {
+	int32 numGpuDevices = 1;
+}
+
+message Status {
+
+}

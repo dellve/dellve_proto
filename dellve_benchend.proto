@@ -1,0 +1,14 @@
+
+syntax = "proto3";
+
+import "dellve_types.proto";
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// 	DELLveBenchend - back-end service for benchmark's read-time data
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+service Benchend {
+	rpc getServerInfo(Empty) returns (ServerInfo);
+	rpc startMetricStream(MetricStreamInfo) returns (Status);
+	rpc stopMetricStream(MetricStreamInfo) returns (Status);
+}
