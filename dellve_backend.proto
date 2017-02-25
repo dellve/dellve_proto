@@ -1,13 +1,12 @@
 
 syntax = "proto3";
 
-import "dellve_types.proto";
+// import "dellve_types.proto"; // inlcude if needed
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // 	DELLveBackend - back-end service for benchmark's read-time data
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 service Backend {
-	rpc consumeMetricStream(stream MetricStreamData) returns (stream MetricStreamCommand);
-	rpc consumeLogStream(stream Log) returns (Status);
+	// Empty for now
 }

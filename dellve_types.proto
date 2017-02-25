@@ -28,8 +28,8 @@ message MetricStreamData {
 }
 
 message MetricStreamInfo {    
-	string backendUrl = 1;
-	string backendPort = 2;
+	// string backendUrl = 1;
+	// string backendPort = 2;
 	int32 sampleIntervalInMs = 3;
 }
 
